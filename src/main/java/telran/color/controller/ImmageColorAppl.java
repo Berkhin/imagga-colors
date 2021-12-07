@@ -34,7 +34,7 @@ public class ImmageColorAppl {
 	System.out.println("\t" + "\t" +"Image");
 	System.out.println();
 	responseEntity.getBody().getResult().getColors().getImage_colors().forEach(System.out::println);
-
+/*new*/ 
 
     }
 
