@@ -1,17 +1,22 @@
 package telran.color.dto;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+
 import lombok.Getter;
 import lombok.ToString;
 
 @Getter
 @ToString
 public class DefaultDto {
-    String closest_palette_color;
-    String closest_palette_color_parent;
+    @JsonAlias({ "closest_palette_color_parent" })
+    String color_parent;
+    @JsonAlias("closest_palette_color")
+    String color;
+
     double percent;
-    
+
     @Override
     public String toString() {
-	return closest_palette_color + "\t" + "\t" + closest_palette_color_parent  + "\t" + "\t" + percent;
+	return color + "\t" + "\t" + color_parent + "\t" + "\t" + percent;
     }
 }
