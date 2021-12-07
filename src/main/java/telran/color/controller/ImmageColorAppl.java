@@ -17,7 +17,6 @@ public class ImmageColorAppl {
 	String httpUrl = "https://api.imagga.com/v2/colors";
 	UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(httpUrl)
 		.queryParam("image_url", "https://imagga.com/static/images/tagging/wind-farm-538576_640.jpg");
-//		.queryParam("language", "ru");
 	HttpHeaders headers = new HttpHeaders();
 	headers.add("Authorization", TOKEN);
 	RequestEntity<String> requestEntity = 
